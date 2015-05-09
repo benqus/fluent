@@ -9,7 +9,8 @@ var MyComponent = fluent.Component.extend({
 
   tagName: 'div',
 
-  classNames: [], // add props or component prototype with "@myProp" accessor, function resolver or "@myProp?active"/"@myProp?active:inactive" condition?
+  classNames: ['@myProp', '@myProp?green', '@myProp?green:blue'],
+  // if myProps is a method of the component, then invoke it and treat return value as truthy
   // or
   classNames: {
     'myProp': 'active', // or
@@ -45,9 +46,14 @@ var MyComponent = fluent.Component.extend({
 
   constructor: function() {
     this.props = {}; // props/states
+    this.status = 'created,changed,attached,detached,destroyed';
   },
 
   // getters
+  
+  get: function (prop) {
+      // return this.props[prop];
+  },
 
   getNode: function() {},
 
