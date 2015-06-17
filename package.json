@@ -1,0 +1,23 @@
+{
+  "name": "fluent",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "traceur --source-maps=inline --dir lib/ out/",
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benqus/fluent.git"
+  },
+  "author": "Bence Kormos <ben.kormos@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benqus/fluent/issues"
+  },
+  "devDependencies": {
+    "traceur": "0.0.90",
+    "systemjs": "~0.18.1"
+  }
+}
